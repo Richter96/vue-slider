@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      titolo: 'Slider show JS!',
+      titolo: 'SLIDER SHOW',
       activeimage: 0,
       games: [
         {
@@ -31,6 +31,10 @@ createApp({
 
     }
   },
+  
+  mounted() {
+    this.autoImage()
+  },
 
   methods: {
     nextImage() {
@@ -44,12 +48,14 @@ createApp({
     prevImage() {
       this.activeimage--
       console.log('cliccato prev');
-      
-      if (this.activeimage > 0) {
-        
+      if (this.activeimage < 0) {
         this.activeimage = this.games.length - 1
       }
-      
+    },
+    autoImage() {
+      setInterval(() => {
+        this.nextImage()
+      }, 2000);
     }
   },
 }).mount('#app')

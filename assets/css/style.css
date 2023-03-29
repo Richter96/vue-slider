@@ -1,32 +1,30 @@
-*
-{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-img
-{
+body {
+	background-color: rgb(0, 0, 142);
+}
+
+img {
 	max-width: 100%;
 }
 
-.container
-{
-	width: 80%;
-	max-width: 1140px;
+.container {
+	width: 90%;
 	margin: 5rem auto;
 }
 
-.slider
-{
+.slider {
 	position: relative;
 	height: 800px;
 	display: flex;
 	box-shadow: 0 0 10px rgb(132, 132, 132);
 }
 
-button.revert
-{
+button.revert {
 	padding: 0.25rem 0.5rem;
 	margin: 1rem 0;
 	border: none;
@@ -37,8 +35,7 @@ button.revert
 }
 
 button.prev,
-button.next
-{
+button.next {
 	display: inline-block;
 	border: none;
 	background-color: white;
@@ -49,8 +46,7 @@ button.next
 
 }
 
-.controls
-{
+.controls {
 	position: absolute;
 	right: 0px;
 	height: 100%;
@@ -61,15 +57,13 @@ button.next
 
 }
 
-.slide
-{
-	position: relative;
+.slide {
+	display: flex;
 	height: 100%;
 }
 
 
-.slide .text
-{
+.slide .text {
 	color: white;
 	position: absolute;
 	bottom: 1rem;
@@ -77,37 +71,31 @@ button.next
 	padding: 1rem;
 }
 
-.slide img
-{
+.slide img {
 	object-fit: cover;
 	height: 100%;
 	max-width: 100%;
 }
 
-.slide
-{
+.slide {
 	width: 70%;
 }
 
-.thumbs
-{
+.thumbs {
 	width: 30%;
 	display: flex;
 	flex-direction: column;
 }
 
-.thumbs img
-{
+.thumbs img {
 	height: calc(100% / 5);
 	object-fit: cover;
 }
 
-.thumbs img.active
-{
+.thumbs img.active {
 	border: 4px inset black;
 }
 
-.thumbs img:not(.active)
-{
+.thumbs img:not(.active) {
 	opacity: 0.5;
 }

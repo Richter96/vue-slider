@@ -16,11 +16,13 @@
 
 <body>
     <div id="app">
-        <h1>{{titolo}}</h1>
+        <h1 class="text-center">{{titolo}}</h1>
         <div class="container">
             <div class="slider">
-                    <div class="slide">
-                        <img :src="games[activeimage].image" alt="">
+                    <div class="slide flex-column">
+                        <img class="align-items-center" :src="games[activeimage].image" alt="">
+                        <h1 class="text-center">{{games[activeimage].title}}</h1>
+                        <p>{{games[activeimage].text}}</p>
                     </div>
                  <div class="thumbs">
                     <img :src="game.image" v-for="(game, index) in games">
