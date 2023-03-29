@@ -20,10 +20,10 @@
         <div class="container">
             <div class="slider">
                     <div class="slide">
-                        <img :src="game[activeimage].image" alt="">
+                        <img :src="games[activeimage].image" alt="">
                     </div>
                  <div class="thumbs">
-                     <img :src="game.image" class="active" v-for="imgage in game">
+                    <img :src="game.image" v-for="(game, index) in games">
                  </div>
                  <nav class="controls">
                     <button @click="prevImage"><i class="fa fa-arrow-up"></i></button>
