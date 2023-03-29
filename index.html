@@ -16,20 +16,20 @@
 
 <body>
     <div id="app">
-        <h1 class="text-center">{{titolo}}</h1>
         <div class="container">
-            <div class="slider" @mouseover="stopAuto" @mouseout="autoImage">
+            <h1 class="text-center" :class="'text-white'" >{{titolo}}</h1>
+            <div class="slider mt-3" @mouseover="stopAuto" @mouseout="autoImage">
                     <div class="slide flex-column">
-                        <img class="align-items-center" :src="games[activeimage].image" alt="">
-                        <h1 class="text-center">{{games[activeimage].title}}</h1>
-                        <p>{{games[activeimage].text}}</p>
+                        <img :src="games[activeimage].image" alt="">
+                        <h2 class="text-center":class="'text-white'">{{games[activeimage].title}}</h2>
+                        <p class="text-center" :class="'text-white'">{{games[activeimage].text}}</p>
                     </div>
                  <div class="thumbs">
                     <img :class="index == activeimage ? 'active' : ''" :src="game.image" v-for="(game, index) in games" @click="activeimage = index">
                  </div>
                  <nav class="controls">
-                    <button @click="prevImage"><i class="fa fa-arrow-up"></i></button>
-                    <button @click="nextImage"><i class="fas fa-arrow-down"></i></button>
+                     <button  class="prev" @click="prevImage"> <i class="fa-solid fa-chevron-up"></i> </button>
+                     <button class="next" @click="nextImage"><i class="fa-solid fa-chevron-down"></i></i></button>
                 </nav>
             </div>
        

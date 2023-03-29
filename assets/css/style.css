@@ -5,15 +5,19 @@
 }
 
 body {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
 }
 
 img {
 	max-width: 100%;;
 }
-
+h1 {
+	padding: 2rem;
+    text-shadow: 7px -7px 8px #ed00ff;
+    font-size: 5rem;
+}
 .container {
-	width: 90%;
+	max-width: 1500px;
 	margin: 5rem auto;
 }
 
@@ -21,7 +25,7 @@ img {
 	position: relative;
 	height: 800px;
 	display: flex;
-	box-shadow: 0 0 10px rgb(132, 132, 132);
+	box-shadow: 0px 0px 20px 20px rgb(255 0 247 / 60%);
 }
 
 button.revert {
@@ -39,7 +43,7 @@ button.next {
 	display: inline-block;
 	border: none;
 	background-color: white;
-	width: 30px;
+	width: 40px;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	margin: 0.25rem;
@@ -47,7 +51,7 @@ button.next {
 
 .controls {
 	position: absolute;
-	right: 0px;
+	right: 13%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -72,7 +76,7 @@ button.next {
 .slide img {
 	object-fit: cover;
 	height: 680px;
-	max-width: 100%;
+	width: 100%;
 }
 
 .slide {

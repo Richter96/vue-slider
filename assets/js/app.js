@@ -55,7 +55,7 @@ createApp({
     autoImage() {
        this.idInterval = setInterval(() => {
         this.nextImage()
-      }, 1000);
+      }, 2000);
     },
     stopAuto() {
       clearInterval(this.idInterval)
