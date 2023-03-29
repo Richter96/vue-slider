@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       titolo: 'SLIDER SHOW',
+      idInterval:null,
       activeimage: 0,
       games: [
         {
@@ -35,7 +36,6 @@ createApp({
   mounted() {
     this.autoImage()
   },
-
   methods: {
     nextImage() {
       console.log('cliccato next');
@@ -53,9 +53,12 @@ createApp({
       }
     },
     autoImage() {
-      setInterval(() => {
+       this.idInterval = setInterval(() => {
         this.nextImage()
-      }, 2000);
+      }, 1000);
+    },
+    stopAuto() {
+      clearInterval(this.idInterval)
     }
   },
 }).mount('#app')
