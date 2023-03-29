@@ -7,7 +7,7 @@ createApp({
       activeimage : 0,
       game : [
         {
-          image: 'img/01.webp',
+          image: './assets/img/01.webp',
           title: 'Marvel\'s Spiderman Miles Morale',
           text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
         }, {
@@ -30,5 +30,14 @@ createApp({
       ]
 
     }
-  }
+  },
+
+  methods: {
+    nextImage(){
+      console.log('cliccato next');
+    },
+    prevImage(){
+      console.log('cliccato prev');
+    }
+  },
 }).mount('#app')

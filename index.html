@@ -19,32 +19,15 @@
         <h1>{{titolo}}</h1>
         <div class="container">
             <div class="slider">
-                <div class="slides" >
-                    
-
-
-                    <!-- <div class="slide active">
-                        <img src="./assets/img/01.webp" alt="">
-                    </div>
                     <div class="slide">
-                        <img src="./assets/img/02.webp" alt="">
+                        <img :src="game[activeimage].image" alt="">
                     </div>
-                    <div class="slide">
-                        <img src="./assets/img/03.webp" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/img/04.webp" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/img/05.webp" alt="">
-                    </div> -->
-                </div>
                  <div class="thumbs">
-                     <img :src="game.image[]" class="active" v-for="imgage in game">
+                     <img :src="game.image" class="active" v-for="imgage in game">
                  </div>
                  <nav class="controls">
-                    <button class="prev"><i class="fa fa-arrow-up"></i></button>
-                    <button class="next"><i class="fas fa-arrow-down"></i></button>
+                    <button @click="prevImage"><i class="fa fa-arrow-up"></i></button>
+                    <button @click="nextImage"><i class="fas fa-arrow-down"></i></button>
                 </nav>
             </div>
        
