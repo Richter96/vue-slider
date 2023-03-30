@@ -4,8 +4,9 @@ createApp({
   data() {
     return {
       titolo: 'SLIDER SHOW',
-      idInterval:null,
+      idInterval: null,
       activeimage: 0,
+      sliderClass : 'slider mt-3',
       games: [
         {
           image: './assets/img/01.webp',
@@ -32,7 +33,7 @@ createApp({
 
     }
   },
-  
+
   mounted() {
     this.autoImage()
   },
@@ -53,9 +54,9 @@ createApp({
       }
     },
     autoImage() {
-       this.idInterval = setInterval(() => {
+      this.idInterval = setInterval(() => {
         this.nextImage()
-      }, 2000);
+      }, 500);
     },
     stopAuto() {
       clearInterval(this.idInterval)
